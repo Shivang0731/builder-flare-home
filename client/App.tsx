@@ -10,6 +10,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Flashcards from "./pages/Flashcards";
 import AudioPlayer from "./pages/AudioPlayer";
+import Quiz from "./pages/Quiz";
+import Notes from "./pages/Notes";
 
 const queryClient = new QueryClient();
 
