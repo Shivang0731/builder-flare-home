@@ -1,7 +1,25 @@
 import { useState, useRef, useEffect } from "react";
-import { Play, Pause, Volume2, VolumeX, RotateCcw, FastForward, Rewind, Upload, ArrowLeft, Mic, FileAudio } from "lucide-react";
+import {
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  RotateCcw,
+  FastForward,
+  Rewind,
+  Upload,
+  ArrowLeft,
+  Mic,
+  FileAudio,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -39,29 +57,33 @@ export default function AudioPlayer() {
       title: "Photosynthesis Overview",
       subject: "Biology",
       duration: "12:30",
-      description: "Comprehensive overview of the photosynthesis process, including light and dark reactions."
+      description:
+        "Comprehensive overview of the photosynthesis process, including light and dark reactions.",
     },
     {
       id: 2,
       title: "Newton's Laws of Motion",
       subject: "Physics",
       duration: "15:45",
-      description: "Detailed explanation of Newton's three laws with practical examples and applications."
+      description:
+        "Detailed explanation of Newton's three laws with practical examples and applications.",
     },
     {
       id: 3,
       title: "World War II Summary",
       subject: "History",
       duration: "25:20",
-      description: "Key events, dates, and impacts of World War II from 1939 to 1945."
+      description:
+        "Key events, dates, and impacts of World War II from 1939 to 1945.",
     },
     {
       id: 4,
       title: "Chemical Bonding",
       subject: "Chemistry",
       duration: "18:15",
-      description: "Ionic, covalent, and metallic bonding explained with molecular examples."
-    }
+      description:
+        "Ionic, covalent, and metallic bonding explained with molecular examples.",
+    },
   ]);
 
   const togglePlay = () => {
@@ -75,7 +97,7 @@ export default function AudioPlayer() {
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
   const skipForward = () => {
@@ -89,7 +111,9 @@ export default function AudioPlayer() {
   const convertTextToAudio = () => {
     // Demo functionality - in real app, this would use text-to-speech API
     if (textToConvert && newTrackTitle) {
-      alert("In a real app, this would convert your text to audio using TTS technology!");
+      alert(
+        "In a real app, this would convert your text to audio using TTS technology!",
+      );
       setTextToConvert("");
       setNewTrackTitle("");
       setNewTrackSubject("");
@@ -101,7 +125,9 @@ export default function AudioPlayer() {
     // Demo functionality - in real app, this would start audio recording
     setTimeout(() => {
       setIsRecording(false);
-      alert("Recording saved! In a real app, this would save your audio recording.");
+      alert(
+        "Recording saved! In a real app, this would save your audio recording.",
+      );
     }, 3000);
   };
 
@@ -109,9 +135,10 @@ export default function AudioPlayer() {
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
-        setCurrentTime(prev => {
+        setCurrentTime((prev) => {
           const newTime = prev + 1;
-          if (newTime >= 300) { // Demo duration of 5 minutes
+          if (newTime >= 300) {
+            // Demo duration of 5 minutes
             setIsPlaying(false);
             return 0;
           }
@@ -133,7 +160,7 @@ export default function AudioPlayer() {
       Physics: "bg-blue-100 text-blue-800",
       Chemistry: "bg-purple-100 text-purple-800",
       History: "bg-orange-100 text-orange-800",
-      Math: "bg-red-100 text-red-800"
+      Math: "bg-red-100 text-red-800",
     };
     return colors[subject] || "bg-gray-100 text-gray-800";
   };
@@ -151,7 +178,9 @@ export default function AudioPlayer() {
             </Link>
             <div className="flex items-center space-x-2">
               <Volume2 className="w-6 h-6 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">Audio Study</span>
+              <span className="text-xl font-bold text-gray-900">
+                Audio Study
+              </span>
             </div>
           </div>
         </div>
@@ -165,9 +194,15 @@ export default function AudioPlayer() {
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div>
-                    <CardTitle className="text-2xl">{tracks[currentTrack]?.title}</CardTitle>
+                    <CardTitle className="text-2xl">
+                      {tracks[currentTrack]?.title}
+                    </CardTitle>
                     <CardDescription className="text-lg">
-                      <Badge className={getSubjectColor(tracks[currentTrack]?.subject)}>
+                      <Badge
+                        className={getSubjectColor(
+                          tracks[currentTrack]?.subject,
+                        )}
+                      >
                         {tracks[currentTrack]?.subject}
                       </Badge>
                     </CardDescription>
@@ -190,11 +225,11 @@ export default function AudioPlayer() {
                       <div
                         key={i}
                         className={`w-1 bg-blue-500 rounded-t ${
-                          isPlaying ? 'animate-pulse' : ''
-                        } ${i < (currentTime / duration) * 50 ? 'bg-blue-600' : 'bg-blue-300'}`}
+                          isPlaying ? "animate-pulse" : ""
+                        } ${i < (currentTime / duration) * 50 ? "bg-blue-600" : "bg-blue-300"}`}
                         style={{
                           height: `${20 + Math.random() * 40}px`,
-                          animationDelay: `${i * 0.1}s`
+                          animationDelay: `${i * 0.1}s`,
                         }}
                       />
                     ))}
@@ -273,7 +308,9 @@ export default function AudioPlayer() {
                 {/* Track Description */}
                 <div className="bg-gray-50 rounded-lg p-4">
                   <h3 className="font-semibold mb-2">About this track:</h3>
-                  <p className="text-gray-700">{tracks[currentTrack]?.description}</p>
+                  <p className="text-gray-700">
+                    {tracks[currentTrack]?.description}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -307,7 +344,7 @@ export default function AudioPlayer() {
                     onChange={(e) => setTextToConvert(e.target.value)}
                     rows={6}
                   />
-                  <Button 
+                  <Button
                     onClick={convertTextToAudio}
                     disabled={!textToConvert || !newTrackTitle}
                     className="w-full"
@@ -334,8 +371,13 @@ export default function AudioPlayer() {
                         <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto">
                           <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
                         </div>
-                        <p className="text-red-600 font-semibold">Recording...</p>
-                        <Button variant="outline" onClick={() => setIsRecording(false)}>
+                        <p className="text-red-600 font-semibold">
+                          Recording...
+                        </p>
+                        <Button
+                          variant="outline"
+                          onClick={() => setIsRecording(false)}
+                        >
                           Stop Recording
                         </Button>
                       </div>
@@ -368,16 +410,21 @@ export default function AudioPlayer() {
                     key={track.id}
                     className={`p-3 rounded-lg cursor-pointer transition-colors ${
                       index === currentTrack
-                        ? 'bg-blue-100 border-2 border-blue-300'
-                        : 'bg-gray-50 hover:bg-gray-100'
+                        ? "bg-blue-100 border-2 border-blue-300"
+                        : "bg-gray-50 hover:bg-gray-100"
                     }`}
                     onClick={() => setCurrentTrack(index)}
                   >
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-semibold text-sm">{track.title}</h3>
-                      <span className="text-xs text-gray-500">{track.duration}</span>
+                      <span className="text-xs text-gray-500">
+                        {track.duration}
+                      </span>
                     </div>
-                    <Badge className={getSubjectColor(track.subject)} variant="secondary">
+                    <Badge
+                      className={getSubjectColor(track.subject)}
+                      variant="secondary"
+                    >
                       {track.subject}
                     </Badge>
                   </div>
@@ -408,10 +455,14 @@ export default function AudioPlayer() {
                 <div className="grid grid-cols-2 gap-4 pt-4 border-t">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-600">24</div>
-                    <div className="text-xs text-gray-600">Tracks Completed</div>
+                    <div className="text-xs text-gray-600">
+                      Tracks Completed
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-600">156</div>
+                    <div className="text-2xl font-bold text-purple-600">
+                      156
+                    </div>
                     <div className="text-xs text-gray-600">Hours Studied</div>
                   </div>
                 </div>
