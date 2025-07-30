@@ -109,6 +109,10 @@ export default function Index() {
                 <Settings className="w-4 h-4 text-gray-600" />
                 <span className="text-sm text-gray-700">Settings</span>
               </div>
+              <Link to="/about" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+                <BookOpen className="w-4 h-4 text-gray-600" />
+                <span className="text-sm text-gray-700">About Me</span>
+              </Link>
             </div>
           </div>
         </div>
