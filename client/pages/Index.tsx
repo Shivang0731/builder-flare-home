@@ -90,10 +90,12 @@ export default function Index() {
             Generate flashcards, create audio notes, build quizzes, and organize your study materials with our AI-powered study aid generator.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6">
-              Start Learning Now
-              <ChevronRight className="w-5 h-5 ml-2" />
-            </Button>
+            <Link to="/flashcards">
+              <Button size="lg" className="text-lg px-8 py-6">
+                Start Learning Now
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6">
               Watch Demo
             </Button>
