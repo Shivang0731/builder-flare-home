@@ -8,10 +8,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Flashcards from "./pages/Flashcards";
+import SummaryCards from "./pages/SummaryCards";
 import AudioPlayer from "./pages/AudioPlayer";
-import Quiz from "./pages/Quiz";
-import Notes from "./pages/Notes";
 
 const queryClient = new QueryClient();
 
