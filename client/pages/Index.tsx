@@ -221,7 +221,7 @@ export default function Index() {
         {/* Footer */}
         <div className="bg-white border-t border-gray-200 px-6 py-4">
           <div className="text-center">
-            <p className="text-xs text-gray-500">© 2024 Edu Helper AI. Built with passion for education and technology.</p>
+            <p className="text-xs text-gray-500">© 2025 Edu Helper AI. Built with passion for education and technology.</p>
             <div className="flex justify-center space-x-4 mt-2">
               <span className="w-4 h-4 bg-gray-300 rounded"></span>
               <span className="w-4 h-4 bg-gray-300 rounded"></span>
