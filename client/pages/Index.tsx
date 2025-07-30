@@ -86,14 +86,14 @@ export default function Index() {
           <div className="mb-6">
             <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">AI TOOLS</h3>
             <div className="space-y-2">
-              <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <Link to="/summary" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                 <BookOpen className="w-4 h-4 text-gray-600" />
                 <span className="text-sm text-gray-700">Summary & Cards</span>
-              </div>
-              <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+              </Link>
+              <Link to="/audio" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                 <Volume2 className="w-4 h-4 text-gray-600" />
                 <span className="text-sm text-gray-700">Audio Player</span>
-              </div>
+              </Link>
             </div>
           </div>
 
