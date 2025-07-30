@@ -113,21 +113,35 @@ export default function Index() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardHeader className="text-center">
-                  <div className={`w-12 h-12 rounded-lg ${feature.color} mx-auto mb-4 flex items-center justify-center`}>
-                    <feature.icon className="w-6 h-6" />
-                  </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center text-gray-600">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            {features.map((feature, index) => {
+              const getFeatureLink = (title: string) => {
+                switch(title) {
+                  case "AI Flashcards": return "/flashcards";
+                  case "Audio Study": return "/audio";
+                  case "Quiz Generator": return "/quiz";
+                  case "Study Notes": return "/notes";
+                  default: return "#";
+                }
+              };
+
+              return (
+                <Link key={index} to={getFeatureLink(feature.title)}>
+                  <Card className="border-none shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer">
+                    <CardHeader className="text-center">
+                      <div className={`w-12 h-12 rounded-lg ${feature.color} mx-auto mb-4 flex items-center justify-center`}>
+                        <feature.icon className="w-6 h-6" />
+                      </div>
+                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-center text-gray-600">
+                        {feature.description}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
