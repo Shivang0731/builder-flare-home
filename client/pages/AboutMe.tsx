@@ -93,9 +93,6 @@ export default function AboutMe() {
               </Link>
               <h2 className="text-lg font-semibold text-gray-900">About</h2>
             </div>
-            <Button variant="outline" size="sm" className="flex items-center space-x-2">
-              <span className="text-xs">Fronts with Figma Maker</span>
-            </Button>
           </div>
         </div>
 
