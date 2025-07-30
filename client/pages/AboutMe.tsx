@@ -1,4 +1,12 @@
-import { Search, Settings, BookOpen, Volume2, Download, Upload, ArrowLeft } from "lucide-react";
+import {
+  Search,
+  Settings,
+  BookOpen,
+  Volume2,
+  Download,
+  Upload,
+  ArrowLeft,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,7 +24,9 @@ export default function AboutMe() {
               <span className="text-white text-xs font-bold">EH</span>
             </div>
             <div>
-              <h1 className="text-sm font-semibold text-gray-900">Edu Helper AI</h1>
+              <h1 className="text-sm font-semibold text-gray-900">
+                Edu Helper AI
+              </h1>
               <p className="text-xs text-gray-500">Smart Study Generator</p>
             </div>
           </div>
@@ -25,19 +35,26 @@ export default function AboutMe() {
         <div className="p-4 border-b border-gray-200">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-            <Input 
-              placeholder="Search documents..." 
+            <Input
+              placeholder="Search documents..."
               className="pl-10 text-sm border-gray-200"
             />
-            <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 bg-gray-100 px-1 rounded">⌘ K</span>
+            <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 bg-gray-100 px-1 rounded">
+              ⌘ K
+            </span>
           </div>
         </div>
 
         <div className="flex-1 p-4">
           <div className="mb-6">
-            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">GET STARTED</h3>
+            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+              GET STARTED
+            </h3>
             <div className="space-y-2">
-              <Link to="/" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <Link
+                to="/"
+                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer"
+              >
                 <Upload className="w-4 h-4 text-gray-600" />
                 <span className="text-sm text-gray-700">Upload Document</span>
               </Link>
@@ -45,13 +62,21 @@ export default function AboutMe() {
           </div>
 
           <div className="mb-6">
-            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">AI TOOLS</h3>
+            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+              AI TOOLS
+            </h3>
             <div className="space-y-2">
-              <Link to="/summary" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <Link
+                to="/summary"
+                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer"
+              >
                 <BookOpen className="w-4 h-4 text-gray-600" />
                 <span className="text-sm text-gray-700">Summary & Cards</span>
               </Link>
-              <Link to="/audio" className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+              <Link
+                to="/audio"
+                className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer"
+              >
                 <Volume2 className="w-4 h-4 text-gray-600" />
                 <span className="text-sm text-gray-700">Audio Player</span>
               </Link>
@@ -59,7 +84,9 @@ export default function AboutMe() {
           </div>
 
           <div className="mb-6">
-            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">EXPORT</h3>
+            <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">
+              EXPORT
+            </h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                 <Download className="w-4 h-4 text-gray-600" />
@@ -105,13 +132,22 @@ export default function AboutMe() {
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-3 mb-4">
-                  <Badge variant="outline" className="text-sm font-mono">.pdf</Badge>
-                  <Badge variant="outline" className="text-sm font-mono">.txt</Badge>
-                  <Badge variant="outline" className="text-sm font-mono">.docx</Badge>
-                  <Badge variant="outline" className="text-sm font-mono">.md</Badge>
+                  <Badge variant="outline" className="text-sm font-mono">
+                    .pdf
+                  </Badge>
+                  <Badge variant="outline" className="text-sm font-mono">
+                    .txt
+                  </Badge>
+                  <Badge variant="outline" className="text-sm font-mono">
+                    .docx
+                  </Badge>
+                  <Badge variant="outline" className="text-sm font-mono">
+                    .md
+                  </Badge>
                 </div>
                 <p className="text-sm text-gray-600">
-                  Maximum file size: 200MB. For best results, use well-formatted documents with clear structure.
+                  Maximum file size: 200MB. For best results, use well-formatted
+                  documents with clear structure.
                 </p>
               </CardContent>
             </Card>
@@ -124,13 +160,16 @@ export default function AboutMe() {
               <CardContent className="space-y-4">
                 <div className="text-gray-700 leading-relaxed">
                   <p className="mb-4">
-                    Hi, I'm <strong>Shivang Kumar Dubey</strong>, first year student at Scaler School of Technology and a developer building 
-                    AI-powered study tools to help students learn smarter. Passionate about NLP, education technology, and 
+                    Hi, I'm <strong>Shivang Kumar Dubey</strong>, first year
+                    student at Scaler School of Technology and a developer
+                    building AI-powered study tools to help students learn
+                    smarter. Passionate about NLP, education technology, and
                     clean user experiences.
                   </p>
                   <p>
-                    This project represents my commitment to leveraging artificial intelligence to democratize education and 
-                    make learning more efficient and engaging for students worldwide.
+                    This project represents my commitment to leveraging
+                    artificial intelligence to democratize education and make
+                    learning more efficient and engaging for students worldwide.
                   </p>
                 </div>
               </CardContent>
@@ -141,7 +180,10 @@ export default function AboutMe() {
         {/* Footer */}
         <div className="bg-white border-t border-gray-200 px-6 py-4">
           <div className="text-center">
-            <p className="text-xs text-gray-500">© 2025 Edu Helper AI. Built with passion for education and technology.</p>
+            <p className="text-xs text-gray-500">
+              © 2025 Edu Helper AI. Built with passion for education and
+              technology.
+            </p>
             <div className="flex justify-center space-x-4 mt-2">
               <span className="w-4 h-4 bg-gray-300 rounded"></span>
               <span className="w-4 h-4 bg-gray-300 rounded"></span>
