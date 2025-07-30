@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Upload, Search, Settings, BookOpen, Brain, Volume2, FileSearch, Download, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
