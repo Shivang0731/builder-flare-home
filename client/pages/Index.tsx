@@ -131,9 +131,6 @@ export default function Index() {
         <div className="bg-white border-b border-gray-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-gray-900">Welcome to Study-Aid Generator</h2>
-            <Button variant="outline" size="sm" className="flex items-center space-x-2">
-              <span className="text-xs">Fronts with Figma Maker</span>
-            </Button>
           </div>
           <p className="text-sm text-gray-600 mt-1">Upload your documents and let AI transform them into interactive study materials</p>
         </div>
